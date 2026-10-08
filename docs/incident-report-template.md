@@ -131,7 +131,7 @@ Document actions taken:
 - [ ] Alert validated
 - [ ] IOC extracted
 - [ ] Affected endpoint investigated
-- [ ] Malicious process contained
+- [ ] Suspicious or malicious process contained
 - [ ] Account secured
 - [ ] Malicious IP/domain blocked
 - [ ] Additional systems searched
@@ -139,7 +139,23 @@ Document actions taken:
 
 ---
 
-## 10. Final Disposition
+## 10. Findings & Root Cause
+
+Document the key findings from the investigation.
+
+### Findings
+
+Summarize the relevant evidence and investigation results.
+
+### Root Cause
+
+Document the identified or suspected root cause.
+
+If the root cause cannot be confirmed, clearly state that further investigation is required.
+
+---
+
+## 11. Final Disposition
 
 Choose the appropriate classification:
 
@@ -149,3 +165,39 @@ False Positive
 Benign / Expected Activity
 Suspicious - Requires Monitoring
 Confirmed Security Incident
+```
+
+Document the reasoning behind the final classification.
+
+---
+
+## 12. Lessons Learned & Recommendations
+
+Document improvements identified during the investigation.
+
+### Detection Improvements
+
+- Tune detection rules
+- Reduce false positives
+- Improve alert context
+- Add relevant telemetry
+
+### Security Improvements
+
+- Strengthen authentication controls
+- Improve endpoint monitoring
+- Update blocking rules
+- Review access controls
+- Improve logging coverage
+
+### Follow-Up Actions
+
+Document any additional investigation, monitoring, remediation, or security improvements required.
+
+---
+
+## 13. Analyst Notes
+
+Record additional observations, assumptions, limitations, or relevant investigation context.
+
+Avoid including sensitive credentials, secrets, or unnecessary personal information.
