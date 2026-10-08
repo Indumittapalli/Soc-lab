@@ -8,7 +8,7 @@
 
 ---
 
-# 1. 📌 Overview
+# 📌 Overview
 
 This repository documents a hands-on Security Operations Center (SOC) home lab focused on security monitoring, alert triage, log analysis, threat detection, IOC investigation, threat hunting, and incident-response workflows.
 
@@ -20,7 +20,37 @@ The main focus areas include endpoint monitoring, network security monitoring, W
 
 ---
 
-# 2. 🎯 Project Objectives
+# 📑 Table of Contents
+
+- [📌 Overview](#-overview)
+- [🎯 Project Objectives](#-project-objectives)
+- [🏗️ Lab Architecture](#-lab-architecture)
+- [🔄 SOC Investigation Workflow](#-soc-investigation-workflow)
+- [🧰 Technologies & Tools](#-technologies--tools)
+- [🚨 Detection & Investigation Use Cases](#-detection--investigation-use-cases)
+- [🔐 Brute-Force Investigation](#-brute-force-investigation)
+- [🦠 Malware Investigation](#-malware-investigation)
+- [🎣 Phishing Investigation](#-phishing-investigation)
+- [🔎 Port-Scanning Investigation](#-port-scanning-investigation)
+- [🌐 Suspicious DNS Investigation](#-suspicious-dns-investigation)
+- [⚡ Suspicious PowerShell Investigation](#-suspicious-powershell-investigation)
+- [🧩 IOC Investigation](#-ioc-investigation)
+- [🧠 SOC Investigation Methodology](#-soc-investigation-methodology)
+- [🗺️ MITRE ATT&CK](#-mitre-attck)
+- [📝 Incident Documentation](#-incident-documentation)
+- [📸 Screenshots & Visual References](#-screenshots--visual-references)
+- [📊 Analyst Skills Demonstrated](#-analyst-skills-demonstrated)
+- [🗂️ Repository Structure](#-repository-structure)
+- [🔍 Investigation Documentation](#-investigation-documentation)
+- [🎓 Learning Outcomes](#-learning-outcomes)
+- [🚀 Future Improvements](#-future-improvements)
+- [🎯 Project Purpose](#-project-purpose)
+- [⚠️ Disclaimer](#-disclaimer)
+- [👤 Author](#-author)
+
+---
+
+# 🎯 Project Objectives
 
 The main objectives of this SOC lab are:
 
@@ -47,7 +77,7 @@ The main objectives of this SOC lab are:
 
 ---
 
-# 3. 🏗️ Lab Architecture
+# 🏗️ Lab Architecture
 
 The SOC lab is designed around an attacker, network security controls, endpoint telemetry, and SOC investigation activities.
 
@@ -103,7 +133,7 @@ The SOC lab is designed around an attacker, network security controls, endpoint 
 
 ---
 
-# 4. 🔄 SOC Investigation Workflow
+# 🔄 SOC Investigation Workflow
 
 The investigations in this project follow a structured SOC-style workflow.
 
@@ -148,11 +178,9 @@ The investigations in this project follow a structured SOC-style workflow.
 
 **Detect → Triage → Investigate → Correlate → Hunt → Respond → Document**
 
-This workflow represents the overall methodology used throughout the repository.
-
 ---
 
-# 5. 🧰 Technologies & Tools
+# 🧰 Technologies & Tools
 
 ## Operating Systems
 
@@ -186,7 +214,7 @@ This workflow represents the overall methodology used throughout the repository.
 
 ---
 
-# 6. 🚨 Detection & Investigation Use Cases
+# 🚨 Detection & Investigation Use Cases
 
 The repository covers multiple common SOC security events and investigation scenarios.
 
@@ -203,7 +231,7 @@ Detailed detection documentation is available in the [`detections/`](./detection
 
 ---
 
-# 7. 🔐 Brute-Force Investigation
+# 🔐 Brute-Force Investigation
 
 The brute-force investigation focuses on identifying repeated authentication failures and determining whether the activity may indicate credential attacks or potential account compromise.
 
@@ -216,7 +244,7 @@ The brute-force investigation focuses on identifying repeated authentication fai
 - Repeated login failures
 - Successful authentication following multiple failures
 - Potential account compromise
-- Related activity around the authentication events
+- Related activity around authentication events
 
 ### SOC Investigation Approach
 
@@ -246,7 +274,7 @@ Document / Escalate
 
 ---
 
-# 8. 🦠 Malware Investigation
+# 🦠 Malware Investigation
 
 The malware investigation focuses on identifying suspicious endpoint activity and determining whether processes or files may indicate malicious behavior.
 
@@ -287,7 +315,7 @@ Document Findings
 
 ---
 
-# 9. 🎣 Phishing Investigation
+# 🎣 Phishing Investigation
 
 The phishing investigation focuses on analyzing potentially malicious emails and identifying associated indicators.
 
@@ -330,7 +358,7 @@ Document Findings
 
 ---
 
-# 10. 🔎 Port-Scanning Investigation
+# 🔎 Port-Scanning Investigation
 
 The port-scanning investigation focuses on identifying network reconnaissance activity.
 
@@ -372,7 +400,7 @@ Document Findings
 
 ---
 
-# 11. 🌐 Suspicious DNS Investigation
+# 🌐 Suspicious DNS Investigation
 
 The suspicious DNS investigation focuses on identifying unusual DNS activity and potential command-and-control indicators.
 
@@ -414,7 +442,7 @@ Document Findings
 
 ---
 
-# 12. ⚡ Suspicious PowerShell Investigation
+# ⚡ Suspicious PowerShell Investigation
 
 The PowerShell investigation focuses on identifying potentially malicious PowerShell execution and suspicious process behavior.
 
@@ -457,7 +485,7 @@ Document Findings
 
 ---
 
-# 13. 🧩 IOC Investigation
+# 🧩 IOC Investigation
 
 Indicators of Compromise are analyzed as part of the investigation workflow.
 
@@ -510,7 +538,7 @@ Document Findings
 
 ---
 
-# 14. 🧠 SOC Investigation Methodology
+# 🧠 SOC Investigation Methodology
 
 The investigations in this project follow a repeatable analyst methodology.
 
@@ -552,7 +580,7 @@ Record evidence, findings, IOCs, impact, response actions, and final disposition
 
 ---
 
-# 15. 🗺️ MITRE ATT&CK
+# 🗺️ MITRE ATT&CK
 
 MITRE ATT&CK is used to provide context to observed attacker behavior.
 
@@ -587,7 +615,7 @@ Techniques are mapped only when supported by the available investigation evidenc
 
 ---
 
-# 16. 📝 Incident Documentation
+# 📝 Incident Documentation
 
 The [`docs/`](./docs/) directory contains documentation resources for recording SOC investigations consistently.
 
@@ -614,7 +642,7 @@ A consistent documentation process helps preserve investigation context and supp
 
 ---
 
-# 17. 📸 Screenshots & Visual References
+# 📸 Screenshots & Visual References
 
 The [`screenshots/`](./screenshots/) directory contains visual references representing different stages of the SOC investigation workflow.
 
@@ -660,9 +688,7 @@ The [`screenshots/`](./screenshots/) directory contains visual references repres
 
 ---
 
-# 18. 📊 Analyst Skills Demonstrated
-
-This project demonstrates practical exposure to:
+# 📊 Analyst Skills Demonstrated
 
 ### SOC Operations
 
@@ -709,7 +735,7 @@ This project demonstrates practical exposure to:
 
 ---
 
-# 19. 🗂️ Repository Structure
+# 🗂️ Repository Structure
 
 ```text
 Soc-lab/
@@ -757,7 +783,7 @@ Soc-lab/
 
 ---
 
-# 20. 🔍 Investigation Documentation
+# 🔍 Investigation Documentation
 
 The repository separates detection content from investigation content so that each security scenario can be approached from both a detection and analyst-investigation perspective.
 
@@ -783,7 +809,7 @@ Each investigation is structured around identifying suspicious activity, analyzi
 
 ---
 
-# 21. 🎓 Learning Outcomes
+# 🎓 Learning Outcomes
 
 Through this project, I developed practical understanding of how a SOC analyst approaches security events from initial detection through final documentation.
 
@@ -810,7 +836,7 @@ Through this project, I developed practical understanding of how a SOC analyst a
 
 ---
 
-# 22. 🚀 Future Improvements
+# 🚀 Future Improvements
 
 Potential future enhancements include:
 
@@ -829,7 +855,7 @@ Potential future enhancements include:
 
 ---
 
-# 23. 🎯 Project Purpose
+# 🎯 Project Purpose
 
 This project was created as a practical cybersecurity portfolio project to demonstrate the ability to approach security events from a SOC Analyst perspective rather than only learning cybersecurity concepts theoretically.
 
@@ -857,7 +883,7 @@ The goal is to demonstrate practical understanding of how security alerts can be
 
 ---
 
-# 24. ⚠️ Disclaimer
+# ⚠️ Disclaimer
 
 This project is intended for educational and defensive security purposes within a controlled laboratory environment.
 
@@ -869,7 +895,7 @@ No real-world systems should be tested without proper authorization.
 
 ---
 
-# 25. 👤 Author
+# 👤 Author
 
 **Mittapalli Indu**
 
