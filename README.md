@@ -10,7 +10,7 @@
 
 # 📌 Overview
 
-This repository documents a hands-on Security Operations Center (SOC) home lab focused on security monitoring, alert triage, log analysis, threat detection, IOC investigation, threat hunting, and incident-response workflows.
+This repository documents a hands-on Security Operations Center (SOC) home lab and investigation workflow focused on security monitoring, alert triage, log analysis, threat detection, IOC investigation, threat hunting, and incident-response practices.
 
 The project is designed to develop practical SOC Analyst skills by investigating common security events across Windows endpoints and network infrastructure in a controlled laboratory environment.
 
@@ -22,31 +22,31 @@ The main focus areas include endpoint monitoring, network security monitoring, W
 
 # 📑 Table of Contents
 
-- [📌 Overview](#-overview)
-- [🎯 Project Objectives](#-project-objectives)
-- [🏗️ Lab Architecture](#-lab-architecture)
-- [🔄 SOC Investigation Workflow](#-soc-investigation-workflow)
-- [🧰 Technologies & Tools](#-technologies--tools)
-- [🚨 Detection & Investigation Use Cases](#-detection--investigation-use-cases)
-- [🔐 Brute-Force Investigation](#-brute-force-investigation)
-- [🦠 Malware Investigation](#-malware-investigation)
-- [🎣 Phishing Investigation](#-phishing-investigation)
-- [🔎 Port-Scanning Investigation](#-port-scanning-investigation)
-- [🌐 Suspicious DNS Investigation](#-suspicious-dns-investigation)
-- [⚡ Suspicious PowerShell Investigation](#-suspicious-powershell-investigation)
-- [🧩 IOC Investigation](#-ioc-investigation)
-- [🧠 SOC Investigation Methodology](#-soc-investigation-methodology)
-- [🗺️ MITRE ATT&CK](#-mitre-attck)
-- [📝 Incident Documentation](#-incident-documentation)
-- [📸 Screenshots & Visual References](#-screenshots--visual-references)
-- [📊 Analyst Skills Demonstrated](#-analyst-skills-demonstrated)
-- [🗂️ Repository Structure](#-repository-structure)
-- [🔍 Investigation Documentation](#-investigation-documentation)
-- [🎓 Learning Outcomes](#-learning-outcomes)
-- [🚀 Future Improvements](#-future-improvements)
-- [🎯 Project Purpose](#-project-purpose)
-- [⚠️ Disclaimer](#-disclaimer)
-- [👤 Author](#-author)
+- [📌 Overview](#overview)
+- [🎯 Project Objectives](#project-objectives)
+- [🏗️ Lab Architecture](#lab-architecture)
+- [🔄 SOC Investigation Workflow](#soc-investigation-workflow)
+- [🧰 Technologies & Tools](#technologies--tools)
+- [🚨 Detection & Investigation Use Cases](#detection--investigation-use-cases)
+- [🔐 Brute-Force Investigation](#brute-force-investigation)
+- [🦠 Malware Investigation](#malware-investigation)
+- [🎣 Phishing Investigation](#phishing-investigation)
+- [🔎 Port-Scanning Investigation](#port-scanning-investigation)
+- [🌐 Suspicious DNS Investigation](#suspicious-dns-investigation)
+- [⚡ Suspicious PowerShell Investigation](#suspicious-powershell-investigation)
+- [🧩 IOC Investigation](#ioc-investigation)
+- [🧠 SOC Investigation Methodology](#soc-investigation-methodology)
+- [🗺️ MITRE ATT&CK](#mitre-attck)
+- [📝 Incident Documentation](#incident-documentation)
+- [📸 Screenshots & Visual References](#screenshots--visual-references)
+- [📊 Analyst Skills Demonstrated](#analyst-skills-demonstrated)
+- [🗂️ Repository Structure](#repository-structure)
+- [🔍 Investigation Documentation](#investigation-documentation)
+- [🎓 Learning Outcomes](#learning-outcomes)
+- [🚀 Future Improvements](#future-improvements)
+- [🎯 Project Purpose](#project-purpose)
+- [⚠️ Disclaimer](#disclaimer)
+- [👤 Author](#author)
 
 ---
 
@@ -73,7 +73,7 @@ The main objectives of this SOC lab are:
 - Perform basic threat hunting
 - Understand incident-response workflows
 - Document investigation findings
-- Practice security incident escalation
+- Practice security incident escalation and documentation
 
 ---
 
@@ -87,7 +87,7 @@ The SOC lab is designed around an attacker, network security controls, endpoint 
                      │      Kali Linux      │
                      └──────────┬───────────┘
                                 │
-                          Attack Traffic
+                           Attack Traffic
                                 │
                                 ▼
                      ┌──────────────────────┐
@@ -96,7 +96,7 @@ The SOC lab is designed around an attacker, network security controls, endpoint 
                      │      Monitoring      │
                      └──────────┬───────────┘
                                 │
-                         Network Activity
+                          Network Activity
                                 │
                                 ▼
                      ┌──────────────────────┐
@@ -106,7 +106,7 @@ The SOC lab is designed around an attacker, network security controls, endpoint 
                      │   Windows Event Logs │
                      └──────────┬───────────┘
                                 │
-                          Security Events
+                           Security Events
                                 │
                                 ▼
                      ┌──────────────────────┐
@@ -141,37 +141,37 @@ The investigations in this project follow a structured SOC-style workflow.
                     Security Alert
                           │
                           ▼
-                   Initial Triage
+                    Initial Triage
                           │
                           ▼
-                   Validate Alert
+                    Validate Alert
                           │
                           ▼
-                  Collect Evidence
+                   Collect Evidence
                           │
                           ▼
-                    Analyze Logs
+                     Analyze Logs
                           │
                           ▼
-                    Extract IOCs
+                     Extract IOCs
                           │
                           ▼
-                   Correlate Events
+                    Correlate Events
                           │
                           ▼
-                Map MITRE ATT&CK
+                 Map MITRE ATT&CK
                           │
                           ▼
-                  Determine Impact
+                   Determine Impact
                           │
                           ▼
-               Response / Escalation
+                Response / Escalation
                           │
                           ▼
-                  Final Disposition
+                   Final Disposition
                           │
                           ▼
-                   Documentation
+                    Documentation
 ```
 
 ### Investigation Lifecycle
@@ -192,6 +192,7 @@ The investigations in this project follow a structured SOC-style workflow.
 - Windows Event Logs
 - Sysmon
 - pfSense
+- Splunk / SPL
 - Network Traffic Analysis
 
 ## Investigation
