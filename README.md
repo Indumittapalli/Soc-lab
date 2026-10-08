@@ -8,42 +8,48 @@
 
 ---
 
-## 📌 Overview
+# 1. 📌 Overview
 
 This repository documents a hands-on Security Operations Center (SOC) home lab focused on security monitoring, alert triage, log analysis, threat detection, IOC investigation, threat hunting, and incident-response workflows.
 
-The project is designed to build practical SOC Analyst skills by investigating common security events across Windows endpoints and network infrastructure in a controlled lab environment.
+The project is designed to develop practical SOC Analyst skills by investigating common security events across Windows endpoints and network infrastructure in a controlled laboratory environment.
 
-Rather than focusing only on cybersecurity theory, this lab follows a structured analyst workflow for understanding alerts, validating suspicious activity, collecting evidence, analyzing telemetry, extracting indicators, correlating events, mapping attacker behavior, and documenting findings.
+The lab follows a structured analyst workflow from initial alert detection through triage, evidence collection, investigation, IOC extraction, event correlation, threat analysis, response, and documentation.
 
----
-
-# 🎯 Project Objectives
-
-The SOC Home Lab provides practical exposure to:
-
-- Security monitoring and alert triage
-- Windows Event Log analysis
-- Sysmon telemetry analysis
-- Network traffic investigation
-- Firewall and network security monitoring
-- IOC extraction and investigation
-- Phishing investigation
-- Brute-force detection
-- Suspicious PowerShell activity detection
-- Suspicious DNS activity detection
-- Port-scanning investigation
-- Malware activity investigation
-- MITRE ATT&CK technique mapping
-- Incident documentation
-- Incident response workflows
-- Basic threat hunting
+The main focus areas include endpoint monitoring, network security monitoring, Windows Event Log analysis, Sysmon telemetry, suspicious activity investigation, IOC analysis, and incident-response methodology.
 
 ---
 
-# 🏗️ Lab Architecture
+# 2. 🎯 Project Objectives
 
-The lab is designed around an attacker, network security controls, endpoint telemetry, and SOC investigation activities.
+The main objectives of this SOC lab are:
+
+- Develop practical SOC monitoring and investigation skills
+- Understand security alert triage
+- Analyze Windows Event Logs
+- Analyze Sysmon endpoint telemetry
+- Investigate network activity
+- Understand firewall security monitoring
+- Identify and investigate Indicators of Compromise (IOCs)
+- Investigate phishing activity
+- Investigate brute-force attacks
+- Investigate suspicious DNS activity
+- Investigate suspicious PowerShell activity
+- Investigate port-scanning activity
+- Investigate potential malware activity
+- Correlate security events
+- Build investigation timelines
+- Apply MITRE ATT&CK techniques
+- Perform basic threat hunting
+- Understand incident-response workflows
+- Document investigation findings
+- Practice security incident escalation
+
+---
+
+# 3. 🏗️ Lab Architecture
+
+The SOC lab is designed around an attacker, network security controls, endpoint telemetry, and SOC investigation activities.
 
 ```text
                      ┌──────────────────────┐
@@ -82,130 +88,338 @@ The lab is designed around an attacker, network security controls, endpoint tele
                      │ Threat Hunting       │
                      │ Incident Response    │
                      └──────────────────────┘
+```
 
-🔄 SOC Investigation Workflow
-Each investigation follows a structured SOC-style workflow:
-                 Security Alert
-                       │
-                       ▼
-                Initial Triage
-                       │
-                       ▼
-                Validate Alert
-                       │
-                       ▼
-               Collect Evidence
-                       │
-                       ▼
-                 Analyze Logs
-                       │
-                       ▼
-                 Extract IOCs
-                       │
-                       ▼
-                Correlate Events
-                       │
-                       ▼
-             Map MITRE ATT&CK
-                       │
-                       ▼
-               Determine Impact
-                       │
-                       ▼
-            Response / Escalation
-                       │
-                       ▼
-               Final Disposition
-                       │
-                       ▼
-                Documentation
+### Core Components
 
-🧰 Technologies & Tools
-Operating Systems
+| Component | Purpose |
+|---|---|
+| Kali Linux | Attack simulation and security testing |
+| pfSense | Firewall and network security monitoring |
+| Windows | Endpoint investigation environment |
+| Windows Event Logs | Authentication and system activity telemetry |
+| Sysmon | Detailed endpoint process and activity telemetry |
+| SOC Workflow | Alert triage, investigation, correlation, and response |
+
+---
+
+# 4. 🔄 SOC Investigation Workflow
+
+The investigations in this project follow a structured SOC-style workflow.
+
+```text
+                    Security Alert
+                          │
+                          ▼
+                   Initial Triage
+                          │
+                          ▼
+                   Validate Alert
+                          │
+                          ▼
+                  Collect Evidence
+                          │
+                          ▼
+                    Analyze Logs
+                          │
+                          ▼
+                    Extract IOCs
+                          │
+                          ▼
+                   Correlate Events
+                          │
+                          ▼
+                Map MITRE ATT&CK
+                          │
+                          ▼
+                  Determine Impact
+                          │
+                          ▼
+               Response / Escalation
+                          │
+                          ▼
+                  Final Disposition
+                          │
+                          ▼
+                   Documentation
+```
+
+### Investigation Lifecycle
+
+**Detect → Triage → Investigate → Correlate → Hunt → Respond → Document**
+
+This workflow represents the overall methodology used throughout the repository.
+
+---
+
+# 5. 🧰 Technologies & Tools
+
+## Operating Systems
+
 - Windows
 - Kali Linux
-Security Monitoring
+
+## Security Monitoring
+
 - Windows Event Logs
 - Sysmon
 - pfSense
 - Network Traffic Analysis
-Investigation
+
+## Investigation
+
 - Log Analysis
 - IOC Analysis
 - Timeline Analysis
 - Threat Hunting
 - MITRE ATT&CK Mapping
-🚨 Detection & Investigation Use Cases
-The repository contains documentation for common SOC security events.
-Use Case	Investigation Focus
-🔐 Brute Force	Repeated authentication failures and suspicious login activity
-🦠 Malware	Suspicious processes, files and endpoint activity
-🎣 Phishing	Suspicious emails, URLs, domains and indicators
-🔎 Port Scanning	Network reconnaissance and scanning behavior
-🌐 Suspicious DNS	Unusual DNS queries, domains and possible C2 indicators
-⚡ Suspicious PowerShell	Potentially malicious PowerShell execution
 
+## Core SOC Concepts
+
+- Security Monitoring
+- Alert Triage
+- Incident Investigation
+- Evidence Collection
+- IOC Extraction
+- Incident Response
+- Security Documentation
+
+---
+
+# 6. 🚨 Detection & Investigation Use Cases
+
+The repository covers multiple common SOC security events and investigation scenarios.
+
+| Use Case | Investigation Focus |
+|---|---|
+| 🔐 Brute Force | Repeated authentication failures and suspicious login activity |
+| 🦠 Malware | Suspicious processes, files, and endpoint activity |
+| 🎣 Phishing | Suspicious emails, URLs, domains, and indicators |
+| 🔎 Port Scanning | Network reconnaissance and scanning behavior |
+| 🌐 Suspicious DNS | Unusual DNS queries, domains, and possible C2 indicators |
+| ⚡ Suspicious PowerShell | Potentially malicious PowerShell execution |
 
 Detailed detection documentation is available in the [`detections/`](./detections/) directory.
-🔐 Brute-Force Investigation
-The brute-force investigation focuses on identifying repeated authentication failures and determining whether the activity may indicate credential attacks or account compromise.
-Investigation Areas
+
+---
+
+# 7. 🔐 Brute-Force Investigation
+
+The brute-force investigation focuses on identifying repeated authentication failures and determining whether the activity may indicate credential attacks or potential account compromise.
+
+### Investigation Areas
+
 - Failed authentication attempts
 - Source IP addresses
 - Target accounts
 - Authentication timelines
-- Successful login following multiple failures
+- Repeated login failures
+- Successful authentication following multiple failures
 - Potential account compromise
+- Related activity around the authentication events
+
+### SOC Investigation Approach
+
+```text
+Authentication Alert
+        ↓
+Review Failed Attempts
+        ↓
+Identify Source
+        ↓
+Identify Target Account
+        ↓
+Build Timeline
+        ↓
+Check Successful Authentication
+        ↓
+Correlate Related Activity
+        ↓
+Assess Risk
+        ↓
+Document / Escalate
+```
+
 📄 [View Brute-Force Detection](./detections/brute-force.md)
+
 📄 [View Brute-Force Investigation](./investigations/brute-force-investigation.md)
-🦠 Malware Investigation
+
+---
+
+# 8. 🦠 Malware Investigation
+
 The malware investigation focuses on identifying suspicious endpoint activity and determining whether processes or files may indicate malicious behavior.
-Investigation Areas
+
+### Investigation Areas
+
 - Suspicious processes
-- File activity
 - Process execution
+- File activity
 - Indicators of compromise
 - Related network connections
+- Suspicious parent-child processes
 - Potential persistence
+- Related endpoint activity
+
+### SOC Investigation Approach
+
+```text
+Suspicious Activity
+        ↓
+Identify Process / File
+        ↓
+Review Process Context
+        ↓
+Analyze Related Events
+        ↓
+Extract IOCs
+        ↓
+Check Network Activity
+        ↓
+Assess Potential Impact
+        ↓
+Document Findings
+```
+
 📄 [View Malware Detection](./detections/malware.md)
+
 📄 [View Malware Investigation](./investigations/malware-investigation.md)
-🎣 Phishing Investigation
+
+---
+
+# 9. 🎣 Phishing Investigation
+
 The phishing investigation focuses on analyzing potentially malicious emails and identifying associated indicators.
-Investigation Areas
+
+### Investigation Areas
+
 - Sender information
 - Suspicious URLs
 - Domains
 - Attachments
 - Email headers
 - User interaction
+- Suspicious links
 - IOC extraction
+
+### Phishing Investigation Workflow
+
+```text
+Suspicious Email
+       ↓
+Analyze Sender
+       ↓
+Review Email Content
+       ↓
+Inspect URLs / Domains
+       ↓
+Analyze Attachments
+       ↓
+Extract IOCs
+       ↓
+Correlate Related Activity
+       ↓
+Assess Risk
+       ↓
+Document Findings
+```
+
 📄 [View Phishing Detection](./detections/phishing.md)
+
 📄 [View Phishing Investigation](./investigations/phishing-investigation.md)
-🔎 Port-Scanning Investigation
+
+---
+
+# 10. 🔎 Port-Scanning Investigation
+
 The port-scanning investigation focuses on identifying network reconnaissance activity.
-Investigation Areas
+
+### Investigation Areas
+
 - Source IP
 - Destination host
 - Destination ports
 - Number of connection attempts
 - Scanning patterns
+- Connection frequency
 - Potential reconnaissance activity
+
+### Investigation Workflow
+
+```text
+Network Activity
+       ↓
+Identify Source
+       ↓
+Identify Destination
+       ↓
+Analyze Destination Ports
+       ↓
+Review Connection Pattern
+       ↓
+Determine Scanning Behavior
+       ↓
+Correlate With Other Activity
+       ↓
+Assess Risk
+       ↓
+Document Findings
+```
+
 📄 [View Port-Scanning Detection](./detections/port-scanning.md)
+
 📄 [View Port-Scanning Investigation](./investigations/port-scanning-investigation.md)
-🌐 Suspicious DNS Investigation
+
+---
+
+# 11. 🌐 Suspicious DNS Investigation
+
 The suspicious DNS investigation focuses on identifying unusual DNS activity and potential command-and-control indicators.
-Investigation Areas
+
+### Investigation Areas
+
 - Queried domains
 - Source hosts
 - Query frequency
 - Unusual domain patterns
 - DNS-related IOCs
 - Potential C2 indicators
+- Related network activity
+
+### DNS Investigation Workflow
+
+```text
+Suspicious DNS Activity
+          ↓
+Identify Source Host
+          ↓
+Identify Queried Domain
+          ↓
+Analyze Query Frequency
+          ↓
+Review Domain Context
+          ↓
+Extract DNS IOCs
+          ↓
+Correlate With Endpoint Activity
+          ↓
+Assess Potential C2
+          ↓
+Document Findings
+```
+
 📄 [View Suspicious DNS Detection](./detections/suspicious-dns.md)
+
 📄 [View DNS Investigation](./investigations/dns-investigation.md)
-⚡ Suspicious PowerShell Investigation
+
+---
+
+# 12. ⚡ Suspicious PowerShell Investigation
+
 The PowerShell investigation focuses on identifying potentially malicious PowerShell execution and suspicious process behavior.
-Investigation Areas
+
+### Investigation Areas
+
 - PowerShell command lines
 - Parent-child process relationships
 - Encoded commands
@@ -213,11 +427,43 @@ Investigation Areas
 - User context
 - Network connections
 - Endpoint activity
+- Related process execution
+
+### PowerShell Investigation Workflow
+
+```text
+PowerShell Activity
+        ↓
+Identify Command Line
+        ↓
+Review Parent Process
+        ↓
+Analyze Execution Context
+        ↓
+Check Encoded / Obfuscated Content
+        ↓
+Review Related Network Activity
+        ↓
+Extract IOCs
+        ↓
+Assess Potential Impact
+        ↓
+Document Findings
+```
+
 📄 [View Suspicious PowerShell Detection](./detections/suspicious-powershell.md)
+
 📄 [View PowerShell Investigation](./investigations/powershell-investigation.md)
-🧩 IOC Investigation
+
+---
+
+# 13. 🧩 IOC Investigation
+
 Indicators of Compromise are analyzed as part of the investigation workflow.
-Common IOC Types
+
+### Common IOC Types
+
+```text
 IP Address
      │
      ├── Domain
@@ -229,8 +475,11 @@ IP Address
      ├── File Name
      │
      └── Email Address
+```
 
-IOC Investigation Workflow
+### IOC Investigation Workflow
+
+```text
 IOC Identified
       ↓
 Validate Indicator
@@ -244,29 +493,71 @@ Search Related Activity
 Assess Threat
       ↓
 Document Findings
+```
+
+### IOC Investigation Questions
+
+- Where was the IOC observed?
+- When was it observed?
+- Which system generated the event?
+- Which user or process was involved?
+- Is the IOC associated with other suspicious activity?
+- Does the IOC appear across multiple events?
+- What potential impact is associated with the IOC?
+- Should the indicator be escalated or blocked?
 
 📄 [View IOC Investigation Resources](./iocs/README.md)
-🧠 SOC Investigation Methodology
+
+---
+
+# 14. 🧠 SOC Investigation Methodology
+
 The investigations in this project follow a repeatable analyst methodology.
-1. Identify
+
+### 1. Identify
+
 Determine what triggered the security alert.
-2. Triage
+
+### 2. Triage
+
 Assess the alert severity, context, and potential impact.
-3. Investigate
-Analyze endpoint, authentication, DNS, network, and process activity.
-4. Correlate
+
+### 3. Validate
+
+Determine whether the alert represents expected behavior, suspicious activity, or a potential security incident.
+
+### 4. Investigate
+
+Analyze endpoint, authentication, DNS, network, process, and system activity.
+
+### 5. Correlate
+
 Connect multiple events and indicators to establish an investigation timeline.
-5. Hunt
-Search available telemetry for related activity.
-6. Map
-Map observed behavior to relevant MITRE ATT&CK techniques when supported by evidence.
-7. Respond
+
+### 6. Hunt
+
+Search available telemetry for related or previously unseen suspicious activity.
+
+### 7. Map
+
+Map observed behavior to relevant MITRE ATT&CK techniques when supported by investigation evidence.
+
+### 8. Respond
+
 Determine appropriate containment, remediation, or escalation actions.
-8. Document
-Record evidence, findings, IOCs, impact, and final disposition.
-🗺️ MITRE ATT&CK
+
+### 9. Document
+
+Record evidence, findings, IOCs, impact, response actions, and final disposition.
+
+---
+
+# 15. 🗺️ MITRE ATT&CK
+
 MITRE ATT&CK is used to provide context to observed attacker behavior.
+
 Investigation areas may include:
+
 - Initial Access
 - Execution
 - Persistence
@@ -275,12 +566,36 @@ Investigation areas may include:
 - Credential Access
 - Discovery
 - Command and Control
-Techniques are mapped only when supported by the investigation evidence.
-📝 Incident Documentation
-The [`docs/`](./docs/) directory contains an incident-report template designed to document SOC investigations consistently.
-The template covers:
+
+### Example Investigation Mapping
+
+```text
+Security Event
+      ↓
+Identify Behavior
+      ↓
+Understand Attack Technique
+      ↓
+Map to MITRE ATT&CK
+      ↓
+Record Technique
+      ↓
+Use Mapping to Support Investigation
+```
+
+Techniques are mapped only when supported by the available investigation evidence.
+
+---
+
+# 16. 📝 Incident Documentation
+
+The [`docs/`](./docs/) directory contains documentation resources for recording SOC investigations consistently.
+
+Incident documentation can include:
+
 - Incident information
 - Alert summary
+- Detection source
 - Investigation timeline
 - Evidence collected
 - Indicators of compromise
@@ -288,64 +603,115 @@ The template covers:
 - MITRE ATT&CK mapping
 - Impact assessment
 - Response actions
+- Escalation details
 - Final disposition
 - Recommendations
 - Lessons learned
-📄 [View Incident Report Template](./docs/incident-report-template.md)
-📸 Screenshots & Visual References
-The [`screenshots/`](./screenshots/) directory contains visual references covering different stages of the SOC investigation workflow.
-SOC Home Lab Architecture
+
+A consistent documentation process helps preserve investigation context and supports effective incident handoff and escalation.
+
+📄 [View Documentation Resources](./docs/)
+
+---
+
+# 17. 📸 Screenshots & Visual References
+
+The [`screenshots/`](./screenshots/) directory contains visual references representing different stages of the SOC investigation workflow.
+
+> **Important:** The screenshots in this repository are illustrative/recreated visuals and are not presented as original historical evidence from the previous lab environment.
+
+### SOC Home Lab Architecture
+
 <img src="./screenshots/soc-home-lab-architecture.png" width="850">
 
-pfSense Firewall Dashboard
+### pfSense Firewall Dashboard
+
 <img src="./screenshots/pfsense-firewall-dashboard.png" width="850">
 
-Windows Event Logs
+### Windows Event Logs
+
 <img src="./screenshots/windows-event-logs.png" width="850">
 
-Sysmon Events
+### Sysmon Events
+
 <img src="./screenshots/sysmon-events.png" width="850">
 
-Splunk Brute-Force Detection
+### Splunk Brute-Force Detection
+
 <img src="./screenshots/splunk-bruteforce-detection.png" width="850">
 
-Phishing Email Investigation
+### Phishing Email Investigation
+
 <img src="./screenshots/phishing-email-investigation.png" width="850">
 
-Suspicious DNS Activity
+### Suspicious DNS Activity
+
 <img src="./screenshots/suspicious-dns-activity.png" width="850">
 
-Suspicious PowerShell Investigation
+### Suspicious PowerShell Investigation
+
 <img src="./screenshots/suspicious-powershell.png" width="850">
 
-IOC Investigation
+### IOC Investigation
+
 <img src="./screenshots/ioc-investigation.png" width="850">
 
-Screenshot disclosure: The visuals in the screenshots/ directory are illustrative/recreated references and are not presented as original historical evidence from the previous lab environment.
+📁 [View All Visual References](./screenshots/)
 
-📁 [View All Screenshots](./screenshots/)
-📊 Analyst Skills Demonstrated
+---
+
+# 18. 📊 Analyst Skills Demonstrated
+
 This project demonstrates practical exposure to:
-- SOC Alert Triage
+
+### SOC Operations
+
 - Security Monitoring
-- Log Analysis
-- Windows Event Logs
-- Sysmon Analysis
-- Network Security Monitoring
-- Phishing Investigation
-- Brute-Force Investigation
-- Malware Investigation
-- PowerShell Investigation
-- DNS Investigation
-- Port-Scan Investigation
-- IOC Extraction
-- Threat Hunting
-- Timeline Analysis
-- MITRE ATT&CK Mapping
+- Alert Triage
+- Incident Investigation
+- Security Alert Validation
+- Investigation Documentation
+- Incident Escalation
 - Incident Response
-- Incident Documentation
-- Security Incident Escalation
-🗂️ Repository Structure
+
+### Endpoint Security
+
+- Windows Event Log Analysis
+- Sysmon Analysis
+- Process Investigation
+- PowerShell Investigation
+- Endpoint Activity Analysis
+
+### Network Security
+
+- Network Traffic Analysis
+- Firewall Monitoring
+- DNS Investigation
+- Port-Scanning Investigation
+- Suspicious Network Activity Analysis
+
+### Threat Detection
+
+- Brute-Force Detection
+- Malware Investigation
+- Phishing Investigation
+- Suspicious DNS Detection
+- Suspicious PowerShell Detection
+- IOC Identification
+
+### Threat Intelligence & Investigation
+
+- IOC Extraction
+- IOC Correlation
+- Timeline Analysis
+- Threat Hunting
+- MITRE ATT&CK Mapping
+
+---
+
+# 19. 🗂️ Repository Structure
+
+```text
 Soc-lab/
 │
 ├── detections/
@@ -371,7 +737,7 @@ Soc-lab/
 │   └── ...
 │
 ├── docs/
-│   └── incident-report-template.md
+│   └── ...
 │
 ├── screenshots/
 │   ├── README.md
@@ -383,28 +749,56 @@ Soc-lab/
 │   ├── phishing-email-investigation.png
 │   ├── suspicious-dns-activity.png
 │   ├── suspicious-powershell.png
-│   └── ioc-investigation.png
+│   ├── ioc-investigation.png
+│   └── ...
 │
 └── README.md
+```
 
-🔍 Investigation Documentation
-Category	Location
-Detection Rules	[`detections/`](./detections/)
-Investigations	[`investigations/`](./investigations/)
-IOC Resources	[`iocs/`](./iocs/)
-Incident Documentation	[`docs/`](./docs/)
-Visual References	[`screenshots/`](./screenshots/)
+---
 
+# 20. 🔍 Investigation Documentation
 
-🎓 Learning Outcomes
+The repository separates detection content from investigation content so that each security scenario can be approached from both a detection and analyst-investigation perspective.
+
+| Category | Location |
+|---|---|
+| Detection Rules | [`detections/`](./detections/) |
+| Investigations | [`investigations/`](./investigations/) |
+| IOC Resources | [`iocs/`](./iocs/) |
+| Evidence | [`evidence/`](./evidence/) |
+| Documentation | [`docs/`](./docs/) |
+| Visual References | [`screenshots/`](./screenshots/) |
+
+### Investigation Categories
+
+- Brute Force
+- Malware
+- Phishing
+- Port Scanning
+- Suspicious DNS
+- Suspicious PowerShell
+
+Each investigation is structured around identifying suspicious activity, analyzing available evidence, extracting indicators, correlating events, assessing potential impact, and documenting the findings.
+
+---
+
+# 21. 🎓 Learning Outcomes
+
 Through this project, I developed practical understanding of how a SOC analyst approaches security events from initial detection through final documentation.
-Key learning areas include:
+
+### Key Learning Areas
+
 - Understanding security alerts
 - Performing initial alert triage
+- Validating suspicious activity
 - Analyzing Windows endpoint telemetry
 - Investigating authentication activity
 - Reviewing network-related activity
 - Identifying suspicious processes
+- Investigating PowerShell activity
+- Investigating DNS activity
+- Investigating network reconnaissance
 - Extracting and validating IOCs
 - Correlating security events
 - Building investigation timelines
@@ -413,8 +807,13 @@ Key learning areas include:
 - Determining appropriate response actions
 - Documenting investigation findings
 - Escalating potential security incidents
-🚀 Future Improvements
+
+---
+
+# 22. 🚀 Future Improvements
+
 Potential future enhancements include:
+
 - Additional detection use cases
 - More endpoint telemetry sources
 - Expanded threat-hunting scenarios
@@ -425,12 +824,23 @@ Potential future enhancements include:
 - Automated incident-report generation
 - Additional network-security investigations
 - Expanded incident-response playbooks
-🎯 Project Purpose
+- Additional endpoint detection scenarios
+- Improved investigation automation
+
+---
+
+# 23. 🎯 Project Purpose
+
 This project was created as a practical cybersecurity portfolio project to demonstrate the ability to approach security events from a SOC Analyst perspective rather than only learning cybersecurity concepts theoretically.
-The core methodology is:
+
+The project emphasizes the complete investigation lifecycle:
+
+```text
 Detect
   ↓
 Triage
+  ↓
+Validate
   ↓
 Investigate
   ↓
@@ -441,16 +851,34 @@ Hunt
 Respond
   ↓
 Document
+```
 
-⚠️ Disclaimer
-This project is intended for educational and defensive security purposes within a controlled lab environment.
+The goal is to demonstrate practical understanding of how security alerts can be investigated, analyzed, correlated, and documented in a SOC environment.
+
+---
+
+# 24. ⚠️ Disclaimer
+
+This project is intended for educational and defensive security purposes within a controlled laboratory environment.
+
 All testing, attack simulation, and investigation activities should be performed only on systems and networks where appropriate authorization has been obtained.
+
 The screenshots included in this repository are illustrative/recreated visuals and should not be interpreted as original historical evidence from the previous lab environment.
-👤 Author
-Mittapalli Indu
+
+No real-world systems should be tested without proper authorization.
+
+---
+
+# 25. 👤 Author
+
+**Mittapalli Indu**
+
 Cybersecurity | SOC Analyst | Security Operations
-GitHub: github.com/Indumittapalli
+
+GitHub: [github.com/Indumittapalli](https://github.com/Indumittapalli)
+
+---
+
 <p align="center">
   <strong>Cybersecurity • SOC • SIEM • Threat Detection • IOC Analysis • Threat Hunting • Incident Response</strong>
 </p>
-```
